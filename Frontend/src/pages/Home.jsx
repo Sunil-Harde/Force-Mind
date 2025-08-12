@@ -6,9 +6,9 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 const Home = () => {
   return (
-    <div className="relative overflow-hidden  text-white">
+    <div className="relative overflow-hidden bg-gray-900">
 
-      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden" >
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden " >
         <ParticleBackground />
 
         <div className="container mx-auto px-4 z-10">
