@@ -8,6 +8,8 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 
 function App() {
+
+  
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
@@ -24,6 +26,7 @@ function App() {
       <Footer />
     </div>
   );
+
 }
 
 export default App;

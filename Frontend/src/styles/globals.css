@@ -56,3 +56,11 @@
   opacity: 1;
   transform: rotate(-45deg) translateY(100%);
 }
+.bgImg {
+    background: red;
+    background-image: url("../../public/Img/img4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+}

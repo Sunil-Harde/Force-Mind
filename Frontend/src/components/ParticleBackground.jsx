@@ -23,7 +23,7 @@ const ParticleBackground = () => {
   };
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="bg-gray-900 absolute inset-0 overflow-hidden pointer-events-none ">
       {particles.map((_, i) => (
         <motion.div
           key={i}
