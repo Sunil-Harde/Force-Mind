@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import ServiceCard from '../components/ServiceCard';
-import { 
-  CodeBracketIcon, 
-  DevicePhoneMobileIcon, 
-  CloudIcon, 
+import {
+  CodeBracketIcon,
+  DevicePhoneMobileIcon,
+  CloudIcon,
   CpuChipIcon,
   ShieldCheckIcon,
   ChartBarIcon
@@ -65,7 +65,7 @@ const Services = () => {
   };
 
   return (
-    <section className="py-20">
+    <section className="py-20 bg-gray-500 text-amber-500">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0 }}
@@ -73,7 +73,7 @@ const Services = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our <span className="text-primary">Services</span></h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4"> Industries We Serve</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Comprehensive IT solutions designed to meet your business needs and drive growth.
           </p>
@@ -92,7 +92,7 @@ const Services = () => {
               variants={item}
               transition={{ duration: 0.5 }}
             >
-              <ServiceCard 
+              <ServiceCard
                 icon={service.icon}
                 title={service.title}
                 description={service.description}
