@@ -17,7 +17,7 @@ const Home = () => {
             className="mb-6"
           >
             <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
-              Innovative IT Solutions
+              Forts Mind  IT Solutions
             </span>
           </motion.div>
 
