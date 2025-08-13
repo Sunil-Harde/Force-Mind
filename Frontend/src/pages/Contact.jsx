@@ -68,8 +68,8 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-gray-500">
+      <div className="container mx-auto px-4 ">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -105,7 +105,7 @@ const Contact = () => {
                   placeholder="Your name"
                 />
                 {errors.name && (
-                  <motion.p 
+                  <motion.p
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="mt-1 text-sm text-red-500"
@@ -129,7 +129,7 @@ const Contact = () => {
                   placeholder="your.email@example.com"
                 />
                 {errors.email && (
-                  <motion.p 
+                  <motion.p
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="mt-1 text-sm text-red-500"
@@ -153,7 +153,7 @@ const Contact = () => {
                   placeholder="Your message..."
                 ></textarea>
                 {errors.message && (
-                  <motion.p 
+                  <motion.p
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="mt-1 text-sm text-red-500"
@@ -201,7 +201,7 @@ const Contact = () => {
             animate={inView2 ? "visible" : "hidden"}
             variants={fadeIn}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-dark border border-gray-800 rounded-xl p-8 h-full"
+            className="bg-dark border border-gray-800 rounded-xl p-8  mb-2 "
           >
             <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
             <p className="text-gray-400 mb-8">
@@ -260,6 +260,25 @@ const Contact = () => {
               </ul>
             </div>
           </motion.div>
+        </div>
+      </div>
+      <div className="w-full h-screen flex justify-center items-center bg-gray-900">
+        <div className="w-full flex justify-center bg-gray-900 py-10">
+
+          <div className="w-[90%] md:w-[80%] lg:w-[70%] rounded-xl overflow-hidden shadow-lg border border-gray-700">
+            <iframe
+              title="Google Map"
+              src="https://www.google.com/maps/embed?pb=YOUR_EMBED_CODE"
+              width="100%"
+              height="450"
+              style={{
+                border: 0,
+              }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>
