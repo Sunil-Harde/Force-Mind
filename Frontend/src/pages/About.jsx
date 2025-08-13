@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { BuildingOfficeIcon, RocketLaunchIcon, UserGroupIcon } from '@heroicons/react/24/outline';
+import { useEffect, useState } from 'react';
 
 const About = () => {
   const [ref1, inView1] = useInView({ threshold: 0.1, triggerOnce: true });
@@ -75,8 +76,8 @@ const About = () => {
         {/* About card sections  */}
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-          <div class="holographic-container">
-            <div class="holographic-card">
+          <div className="holographic-container">
+            <div className="holographic-card">
               <motion.div
                 ref={ref3}
                 initial="hidden"
@@ -96,8 +97,8 @@ const About = () => {
             </div>
           </div>
 
-          <div class="holographic-container">
-            <div class="holographic-card">
+          <div className="holographic-container">
+            <div className="holographic-card">
               <motion.div
                 ref={ref3}
                 initial="hidden"
@@ -117,8 +118,8 @@ const About = () => {
             </div>
           </div>
 
-          <div class="holographic-container">
-            <div class="holographic-card">
+          <div className="holographic-container">
+            <div className="holographic-card">
               <motion.div
                 ref={ref3}
                 initial="hidden"
@@ -138,8 +139,8 @@ const About = () => {
             </div>
           </div>
 
-          <div class="holographic-container">
-            <div class="holographic-card">
+          <div className="holographic-container">
+            <div className="holographic-card">
               <motion.div
                 ref={ref3}
                 initial="hidden"
@@ -159,8 +160,8 @@ const About = () => {
             </div>
           </div>
 
-          <div class="holographic-container">
-            <div class="holographic-card">
+          <div className="holographic-container">
+            <div className="holographic-card">
               <motion.div
                 ref={ref3}
                 initial="hidden"
@@ -180,8 +181,8 @@ const About = () => {
             </div>
           </div>
 
-          <div class="holographic-container">
-            <div class="holographic-card">
+          <div className="holographic-container">
+            <div className="holographic-card">
               <motion.div
                 ref={ref3}
                 initial="hidden"
