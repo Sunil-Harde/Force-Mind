@@ -97,4 +97,13 @@ const Footer = () => {
   );
 };
 
+// Social Icons (you can replace with actual Heroicons or other icons)
+// const FacebookIcon = () => {};
+
+// const TwitterIcon = () =>  {}
+
+// const LinkedInIcon = () => {}
+
+// const GithubIcon = () => {}
+
 export default Footer;

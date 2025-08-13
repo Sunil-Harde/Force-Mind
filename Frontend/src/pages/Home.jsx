@@ -6,7 +6,7 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 const Home = () => {
   return (
-    <div className="relative overflow-hidden bg-gray-900">
+    <div className="relative overflow-hidden  bg-gray-900">
 
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden " >
         <ParticleBackground />
@@ -89,8 +89,8 @@ const Home = () => {
 
       </section>
 
-      <div>
-        <OurTechnology/>
+      <div >
+        <OurTechnology />
       </div>
 
 
