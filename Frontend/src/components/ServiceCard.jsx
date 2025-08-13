@@ -15,6 +15,24 @@ const ServiceCard = ({ icon, title, description }) => {
       </div>
       <h3 className="text-xl font-bold text-amard-50 mb-2">{title}</h3>
       <p className="text-gray-400">{description}</p>
+
+      {/* <!-- From Uiverse.io by Smit-Prajapati --> */}
+      <div className="parent">
+        <div className="card">
+          <div className="content-box">
+            <span className="card-title">3D Card</span>
+            <p className="card-content">
+              className ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+            <span className="see-more">See More</span>
+          </div>
+          {/* <div className="date-box">
+            <span className="month">JUNE</span>
+            <span className="date">29</span>
+          </div> */}
+        </div>
+      </div>
+
     </motion.div>
   );
 };

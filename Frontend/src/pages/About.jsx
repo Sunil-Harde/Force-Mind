@@ -14,7 +14,7 @@ const About = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-700 text-amber-500">
+    <section className="py-20 bg-linear-to-bl from-gray-900 to-gray-100 text-amber-500">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0 }}
@@ -23,7 +23,7 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About <span className='text-white'>Us</span> </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-black max-w-2xl mx-auto">
             We are a team of passionate technologists dedicated to delivering innovative solutions.
           </p>
         </motion.div>
@@ -37,11 +37,11 @@ const About = () => {
             transition={{ duration: 0.5 }}
           >
             <h3 className="text-2xl font-bold mb-4">Our Story</h3>
-            <p className="text-gray-400 mb-4">
+            <p className="text-black mb-4">
               Founded in 2015, TechSolutions started as a small team of developers with a big vision.
               Today, we've grown into a full-service IT company serving clients worldwide.
             </p>
-            <p className="text-gray-400">
+            <p className="text-black">
               Our journey has been marked by innovation, dedication, and a relentless pursuit of
               excellence in everything we do.
             </p>
