@@ -55,7 +55,7 @@ const Navbar = () => {
             className="flex items-center space-x-2"
           >
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-dark font-bold text-xl">IT</span>
+              <span className="text-amber-500 font-bold text-xl">IT</span>
             </div>
             <span className="text-white font-bold text-xl">TechSolutions</span>
           </motion.div>
@@ -73,7 +73,7 @@ const Navbar = () => {
               <Link
                 to={link.path}
                 className={`font-medium ${
-                  location.pathname === link.path ? 'text-primary' : 'text-white'
+                  location.pathname === link.path ? 'text-amber-500' : 'text-white hover:text-gray-500'
                 }`}
               >
                 {link.name}

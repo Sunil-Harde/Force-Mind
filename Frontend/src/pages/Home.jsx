@@ -6,9 +6,9 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 const Home = () => {
   return (
-    <div className="relative overflow-hidden  bg-gray-900">
+    <div className=" overflow-hidden  ">
 
-      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden " >
+      <section className="relative bg-gray-900  min-h-screen flex flex-col items-center justify-center overflow-hidden  " >
         <ParticleBackground />
 
         <div className="container mx-auto px-4 z-10">
@@ -19,7 +19,7 @@ const Home = () => {
               transition={{ duration: 0.5 }}
               className="mb-6"
             >
-              <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+              <span className=" text-gray-400 text-primary px-4 py-2 rounded-full text-sm font-medium">
                 Innovative IT Solutions
               </span>
             </motion.div>
@@ -49,7 +49,7 @@ const Home = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-primary text-dark font-bold px-8 py-3 rounded-lg flex items-center justify-center gap-2"
+                className=" text-gray-400 hover:text-amber-500 cursor-pointer text-dark font-bold px-8 py-3 rounded-lg flex items-center justify-center gap-2"
               >
                 Get Started
                 <ArrowRightIcon className="h-5 w-5" />
@@ -57,7 +57,7 @@ const Home = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border border-primary text-primary font-bold px-8 py-3 rounded-lg"
+                className="border border-primary text-primary font-bold px-8 py-3 rounded-lg text-gray-400 cursor-pointer hover:text-amber-500"
               >
                 Learn More
               </motion.button>
@@ -89,10 +89,9 @@ const Home = () => {
 
       </section>
 
-      <div >
+      <div className=' py-10 min-h-screen flex items-center justify-center bgImg'>
         <OurTechnology />
       </div>
-
 
 
     </div>
