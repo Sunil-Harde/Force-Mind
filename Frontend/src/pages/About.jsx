@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { BuildingOfficeIcon, RocketLaunchIcon, UserGroupIcon } from '@heroicons/react/24/outline';
 import { useEffect, useState } from 'react';
+import AboutCard from '../components/AboutCard';
 
 const About = () => {
   const [ref1, inView1] = useInView({ threshold: 0.1, triggerOnce: true });
@@ -12,6 +13,40 @@ const About = () => {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   };
+
+  const about = [
+    {
+      icon: <BuildingOfficeIcon />,
+      title: "Our Story",
+      description: " To empower businesses through innovative technology solutions that drive growth and efficiency."
+    },
+    {
+      icon: <RocketLaunchIcon />,
+      title: "Our Visio",
+      description: "To empower businesses through innovative technology solutions that drive growth and efficiency."
+    },
+    {
+      icon: <UserGroupIcon />,
+      title: "Our Team",
+      description: "To empower businesses through innovative technology solutions that drive growth and efficiency."
+    },
+    {
+      icon: <UserGroupIcon />,
+      title: "Our Team",
+      description: "To empower businesses through innovative technology solutions that drive growth and efficiency."
+    },
+    {
+      icon: <RocketLaunchIcon />,
+      title: "Our Visio",
+      description: "To empower businesses through innovative technology solutions that drive growth and efficiency."
+    },
+    {
+      icon: <UserGroupIcon />,
+      title: "Our Visio",
+      description: "To empower businesses through innovative technology solutions that drive growth and efficiency."
+    },
+
+  ]
 
   return (
     <section className="py-20 bg-linear-to-bl from-gray-900 to-gray-100 text-amber-500">
@@ -74,133 +109,33 @@ const About = () => {
         </div>
 
         {/* About card sections  */}
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-          <div className="holographic-container">
-            <div className="holographic-card">
-              <motion.div
-                ref={ref3}
-                initial="hidden"
-                animate={inView3 ? "visible" : "hidden"}
-                variants={fadeIn}
-                transition={{ duration: 0.5 }}
-                className="bg-dark border border-gray-800 rounded-xl p-8 hover:border-primary transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <BuildingOfficeIcon className="w-6 h-6 text-primary" />
+          {
+            about.map((items, index) => {
+              return (
+                <div
+                  key={index}
+                  className="holographic-container">
+                  <div className="holographic-card">
+                    <motion.div
+                      ref={ref3}
+                      initial="hidden"
+                      animate={inView3 ? "visible" : "hidden"}
+                      variants={fadeIn}
+                      transition={{ duration: 0.5 }}
+                      className="bg-dark border border-gray-800 rounded-xl p-8 hover:border-primary transition-all duration-300"
+                    >
+                      <AboutCard
+                        icon={items.icon}
+                        title={items.title}
+                        description={items.description}
+                      />
+                    </motion.div>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold mb-2">Our Mission</h3>
-                <p className="text-gray-400">
-                  To empower businesses through innovative technology solutions that drive growth and efficiency.
-                </p>
-              </motion.div>
-            </div>
-          </div>
-
-          <div className="holographic-container">
-            <div className="holographic-card">
-              <motion.div
-                ref={ref3}
-                initial="hidden"
-                animate={inView3 ? "visible" : "hidden"}
-                variants={fadeIn}
-                transition={{ duration: 0.5 }}
-                className="bg-dark border border-gray-800 rounded-xl p-8 hover:border-primary transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <RocketLaunchIcon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Our Visio</h3>
-                <p className="text-gray-400">
-                  To empower businesses through innovative technology solutions that drive growth and efficiency.
-                </p>
-              </motion.div>
-            </div>
-          </div>
-
-          <div className="holographic-container">
-            <div className="holographic-card">
-              <motion.div
-                ref={ref3}
-                initial="hidden"
-                animate={inView3 ? "visible" : "hidden"}
-                variants={fadeIn}
-                transition={{ duration: 0.5 }}
-                className="bg-dark border border-gray-800 rounded-xl p-8 hover:border-primary transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <UserGroupIcon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Our Team</h3>
-                <p className="text-gray-400">
-                  To empower businesses through innovative technology solutions that drive growth and efficiency.
-                </p>
-              </motion.div>
-            </div>
-          </div>
-
-          <div className="holographic-container">
-            <div className="holographic-card">
-              <motion.div
-                ref={ref3}
-                initial="hidden"
-                animate={inView3 ? "visible" : "hidden"}
-                variants={fadeIn}
-                transition={{ duration: 0.5 }}
-                className="bg-dark border border-gray-800 rounded-xl p-8 hover:border-primary transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <UserGroupIcon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Our Team</h3>
-                <p className="text-gray-400">
-                  To empower businesses through innovative technology solutions that drive growth and efficiency.
-                </p>
-              </motion.div>
-            </div>
-          </div>
-
-          <div className="holographic-container">
-            <div className="holographic-card">
-              <motion.div
-                ref={ref3}
-                initial="hidden"
-                animate={inView3 ? "visible" : "hidden"}
-                variants={fadeIn}
-                transition={{ duration: 0.5 }}
-                className="bg-dark border border-gray-800 rounded-xl p-8 hover:border-primary transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <UserGroupIcon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Our Team</h3>
-                <p className="text-gray-400">
-                  To empower businesses through innovative technology solutions that drive growth and efficiency.
-                </p>
-              </motion.div>
-            </div>
-          </div>
-
-          <div className="holographic-container">
-            <div className="holographic-card">
-              <motion.div
-                ref={ref3}
-                initial="hidden"
-                animate={inView3 ? "visible" : "hidden"}
-                variants={fadeIn}
-                transition={{ duration: 0.5 }}
-                className="bg-dark border border-gray-800 rounded-xl p-8 hover:border-primary transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <UserGroupIcon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Our Team</h3>
-                <p className="text-gray-400">
-                  To empower businesses through innovative technology solutions that drive growth and efficiency.
-                </p>
-              </motion.div>
-            </div>
-          </div>
+              )
+            })
+          }
         </div>
       </div>
     </section>
