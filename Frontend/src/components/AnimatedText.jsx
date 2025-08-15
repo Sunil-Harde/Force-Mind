@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 const AnimatedText = ({ text, className = '' }) => {
   const words = text.split(' ');
 
-         console.log(words)
-         console.log(text)
+  console.log(words)
+  console.log(text)
 
   const container = {
     hidden: { opacity: 0 },

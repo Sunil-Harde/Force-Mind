@@ -26,7 +26,7 @@ const Home = () => {
 
             <AnimatedText
               text="Transforming Ideas Into Digital Reality"
-              className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-amber-500"
+              className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-amber-500 pl-10 "
             />
 
             <motion.p
@@ -44,12 +44,12 @@ const Home = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.5 }}
-              className="flex flex-col sm:flex-row justify-center gap-4"
+              className="flex flex-row justify-center gap-4"
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className=" text-gray-400 hover:text-amber-500 cursor-pointer text-dark font-bold px-8 py-3 rounded-lg flex items-center justify-center gap-2"
+                className=" text-gray-400 hover:text-amber-500 cursor-pointer text-dark font-bold px-2 sm:px-8 py-3 rounded-lg flex items-center justify-center gap-2"
               >
                 Get Started
                 <ArrowRightIcon className="h-5 w-5" />

@@ -23,26 +23,21 @@ const Footer = () => {
   ];
 
   return (
-    <motion.footer
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="bg-darker py-12 pl-10 bg-gray-800"
-    >
-      <div className="mx-auto px-4  ">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-          <div className="">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-dark font-bold text-xl">IT</span>
-              </div>
+    <motion.footer className="bg-darker py-12 pl-10 bg-gray-800">
+      <motion.div  className="mx-auto px-4" >
+        <motion.div  className="grid grid-cols-2 md:grid-cols-3 gap-8">
+          <motion.div  className="">
+            <motion.div  className="flex items-center space-x-2 mb-4">
+              <motion.div  className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                <span className="text-dark font-bold text-xl" initial={{opacity:0, marginTop:-20}}  transition={{duration:0.5}}>IT</span>
+              </motion.div >
               <span className="text-white font-bold text-xl">TechSolutions</span>
-            </div>
+            </motion.div >
             <p className="text-gray-400 mb-4">
               Leading IT solutions provider with cutting-edge technology and
               exceptional service.
             </p>
-            <div className="flex space-x-4">
+            <motion.div  className="flex space-x-4">
               {socialLinks.map((social) => (
                 <motion.a
                   key={social.name}
@@ -55,10 +50,10 @@ const Footer = () => {
                   {social.icon}
                 </motion.a>
               ))}
-            </div>
-          </div>
+            </motion.div >
+          </motion.div >
 
-          <div className="flex flex-col justify-center items-center">
+          <motion.div  className="flex flex-col justify-center items-center">
             <h3 className="text-white font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {footerLinks.map((link) => (
@@ -76,9 +71,9 @@ const Footer = () => {
                 </motion.li>
               ))}
             </ul>
-          </div>
+          </motion.div >
 
-          <div >
+          <motion.div  >
             <h3 className="text-white font-bold text-lg mb-4 ">Contact</h3>
             <address className="text-gray-400 not-italic">
               <p className="mb-2">123 Tech Street</p>
@@ -86,13 +81,13 @@ const Footer = () => {
               <p className="mb-2">Phone: (123) 456-7890</p>
               <p>Email: info@techsolutions.com</p>
             </address>
-          </div>
-        </div>
+          </motion.div >
+        </motion.div >
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <motion.div  className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; {new Date().getFullYear()} TechSolutions. All rights reserved.</p>
-        </div>
-      </div>
+        </motion.div >
+      </motion.div >
     </motion.footer>
   );
 };
