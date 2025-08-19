@@ -171,9 +171,10 @@
 }
 
 .bgImg {
-  background-image: url("../../public/Img/img4.jpg");
+  background-image: url("/Img/img4.jpg"); /* Adjust path as needed */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  z-index: 1;
 }

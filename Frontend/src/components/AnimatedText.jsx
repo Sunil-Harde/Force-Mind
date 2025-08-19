@@ -1,38 +1,40 @@
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 const AnimatedText = ({ text, className = '' }) => {
   const words = text.split(' ');
 
-  console.log(words)
-  console.log(text)
+  const [start, setStart] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setStart(true);
+    }, 2400); // 2.4s delay before animation starts
+    return () => clearTimeout(timer);
+  }, []);
 
   const container = {
     hidden: { opacity: 0 },
-    visible: (i = 1) => ({
+    visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.12, delayChildren: 0.04 * i },
-    }),
+      transition: {
+        staggerChildren: 0.12,
+      },
+    },
   };
 
   const child = {
-    visible: {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i) => ({
       opacity: 1,
       y: 0,
       transition: {
+        delay: 0.04 * i + 2.4, // 👈 delay each word, starting from 2.4s
         type: 'spring',
         damping: 12,
         stiffness: 100,
       },
-    },
-    hidden: {
-      opacity: 0,
-      y: 20,
-      transition: {
-        type: 'spring',
-        damping: 12,
-        stiffness: 100,
-      },
-    },
+    }),
   };
 
   return (
@@ -44,9 +46,10 @@ const AnimatedText = ({ text, className = '' }) => {
     >
       {words.map((word, index) => (
         <motion.span
-          variants={child}
-          className="mr-2"
           key={index}
+          className="mr-2"
+          variants={child}
+          custom={index} // 👈 use custom index for delay
         >
           {word}
         </motion.span>
