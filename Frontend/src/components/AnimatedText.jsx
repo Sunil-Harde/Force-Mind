@@ -4,14 +4,6 @@ import { useEffect, useState } from 'react';
 const AnimatedText = ({ text, className = '' }) => {
   const words = text.split(' ');
 
-  const [start, setStart] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setStart(true);
-    }, 2400); // 2.4s delay before animation starts
-    return () => clearTimeout(timer);
-  }, []);
 
   const container = {
     hidden: { opacity: 0 },
@@ -29,7 +21,7 @@ const AnimatedText = ({ text, className = '' }) => {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 0.04 * i + 2.4, // 👈 delay each word, starting from 2.4s
+        delay: 0.04 * i + 2.2,
         type: 'spring',
         damping: 12,
         stiffness: 100,

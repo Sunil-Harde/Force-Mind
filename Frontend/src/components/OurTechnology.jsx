@@ -11,7 +11,7 @@ function OurTechnology() {
     const frontEnd = ["HTML", "CSS", "JavaScript", "React", "Tailwind Css", "Bootstrap"]
 
     return (
-        <motion.div className='flex flex-col items-center justify-center px-5' >
+        <motion.div className='flex flex-col items-center justify-center px-5 ' >
 
             <div className='relative'>
 
@@ -46,7 +46,7 @@ function OurTechnology() {
                         </motion.h1>
                     </div>
 
-                  
+
                     <div className='flex flex-col  items-start backdrop-blur-md py-10 px-5 lg:p-10 rounded-4xl gap-5 max-w-150'>
 
                         <motion.h1 className='font-bold text-gray-50 ml-2' initial={{ y: "-60px", opacity: "0" }} whileInView={{ y: 0, opacity: 1 }} viewport={{ margin: "-90px", once: "true" }} transition={{ duration: .6, }} > DevOps </motion.h1>
@@ -64,7 +64,7 @@ function OurTechnology() {
                         </div>
 
                         <motion.div initial={{ y: "-60px", opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ margin: "-30px", once: "true" }} transition={{ duration: 1.5, delay: 0.8 }}>
-                            <motion.a href="#" className='text-gray-50 font-bold ml-2 hover:text-amber-500 cursor-no-drop' >Hire Backend Developer -></motion.a>
+                            <motion.p href="#" className='text-gray-50 font-bold ml-2 hover:text-amber-500 cursor-no-drop' >Hire Backend Developer -></motion.p>
                         </motion.div>
                     </div>
 
@@ -91,7 +91,7 @@ function OurTechnology() {
                         </div>
 
                         <motion.div initial={{ y: "-60px", opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ margin: "-30px", once: "true" }} transition={{ duration: 1.5, delay: 0.8 }}>
-                            <motion.a href="#" className='text-gray-50 font-bold ml-2 hover:text-amber-500 cursor-no-drop' >Hire Backend Developer -></motion.a>
+                            <motion.p href="#" className='text-gray-50 font-bold ml-2 hover:text-amber-500 cursor-no-drop' >Hire Backend Developer -></motion.p>
                         </motion.div>
                     </div>
 
@@ -112,7 +112,7 @@ function OurTechnology() {
                         </div>
 
                         <motion.div initial={{ y: "-60px", opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ margin: "-30px", once: "true" }} transition={{ duration: 1.5, delay: 0.8 }}>
-                            <motion.a href="#" className='text-gray-50 font-bold ml-2 hover:text-amber-500 cursor-no-drop' >Hire Backend Developer -></motion.a>
+                            <motion.p href="" className='text-gray-50 font-bold ml-2 hover:text-amber-500 cursor-no-drop' >Hire Backend Developer -></motion.p>
                         </motion.div>
                     </div>
 

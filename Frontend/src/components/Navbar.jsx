@@ -72,6 +72,8 @@ const Navbar = () => {
                 to={link.path}
                 className={`font-medium ${location.pathname === link.path ? 'text-amber-500' : 'text-white hover:text-gray-500'
                   }`}
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+
               >
                 {link.name}
                 {location.pathname === link.path && (
@@ -119,8 +121,8 @@ const Navbar = () => {
                 <Link
                   to={link.path}
                   className={`block py-2 text-lg ${location.pathname === link.path
-                      ? 'text-primary'
-                      : 'text-white'
+                    ? 'text-primary'
+                    : 'text-white'
                     }`}
                 >
                   {link.name}

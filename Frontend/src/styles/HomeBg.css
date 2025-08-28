@@ -1,0 +1,150 @@
+.bg span {
+   position: absolute;
+   display: block;
+   width: 5rem;
+   height: 10px;
+   margin: 3rem;
+   border-radius: 2rem;
+   background-color: #ff6600;
+   background: linear-gradient(to right, rgb(255, 166, 0), rgb(255, 0, 0));
+   animation: floatUpDown 6s infinite ease-in-out;
+   opacity: 0;
+   -webkit-animation: floatUpDown 6s infinite ease-in-out;
+}
+
+/* Individual span styles with correct transform & animation-delay */
+
+
+.bg span:nth-child(2) {
+   top: 20rem;
+   left: 2%;
+   transform: rotate(20deg);
+   background: linear-gradient(to right, rgb(255, 102, 0), rgb(255, 0, 0));
+   animation-name: floatUpDownLeft;
+   animation-delay: 2.2s;
+
+
+}
+
+.bg span:nth-child(3) {
+   top: 10rem;
+   left: 20%;
+   animation-delay: .3s;
+   transform: rotate(-20deg);
+   background: linear-gradient(to right, rgb(255, 166, 0), rgb(255, 0, 0));
+
+}
+
+.bg span:nth-child(4) {
+   top: 5rem;
+   left: 50%;
+   height: 50px;
+   width: 10px;
+   animation-delay: 1.2s;
+   transform: rotate(20deg);
+   background: linear-gradient(to top, rgb(255, 166, 0), rgb(255, 0, 0));
+
+
+}
+
+.bg span:nth-child(5) {
+   top: 0;
+   left: 60%;
+   height: 20px;
+   width: 20px;
+   border-radius: 50%;
+   animation-delay: 3.5s;
+   background: linear-gradient(to left, rgb(255, 166, 0), rgb(255, 0, 0));
+   animation-name: floatUpDownLeft;
+}
+
+.bg span:nth-child(6) {
+   top: 0;
+   left: 90%;
+   animation-delay: 0.8s;
+   transform: rotate(90deg);
+   animation-name: floatUpDownLeft;
+   background: linear-gradient(to left, rgb(255, 166, 0), rgb(255, 0, 0));
+
+}
+
+.bg span:nth-child(7) {
+   top: 0;
+   left: 45%;
+   animation-delay: 3.5s;
+   animation-name: floatUp;
+   background: linear-gradient(to left, rgb(255, 166, 0), rgb(255, 0, 0));
+
+}
+
+
+.bg span:nth-child(8) {
+   top: 0;
+   left: 20%;
+   height: 20px;
+   width: 20px;
+   border-radius: 50%;
+   animation-delay: 2.7s;
+   background: linear-gradient(to left, rgb(255, 166, 0), rgb(255, 0, 0));
+   animation-name: floatUp;
+}
+
+
+@keyframes floatUpDown {
+   0% {
+      transform: translateY(100vh);
+      opacity: 0;
+   }
+
+   10%,
+   90% {
+      opacity: 1;
+   }
+
+   100% {
+      transform: rotate(20deg) translateY(-5vh);
+      opacity: 0;
+   }
+}
+
+@keyframes floatUpDownLeft {
+   0% {
+      transform: translateY(100vh);
+      opacity: 0;
+   }
+
+   10% {
+      opacity: 1;
+   }
+
+   50% {
+      transform: rotate(-20deg) translateY(50vh);
+      opacity: 1;
+   }
+
+   90% {
+      opacity: 1;
+   }
+
+   100% {
+      transform: rotate(0deg) translateY(-5vh);
+      opacity: 0;
+   }
+}
+
+@keyframes floatUp {
+   0% {
+      transform: translateY(100vh);
+      opacity: 0;
+   }
+
+   10%,
+   90% {
+      opacity: 1;
+   }
+
+   100% {
+      transform: translateY(0vh);
+      opacity: 0;
+   }
+}
