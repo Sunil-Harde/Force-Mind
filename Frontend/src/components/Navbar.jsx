@@ -62,7 +62,7 @@ const Navbar = () => {
           {navLinks.map((link, id) => (
             <motion.div
               key={link.name}
-              whileHover="hover"
+              whileHover=""
               variants={linkVariants}
               className="relative"
               initial={{ opacity: 0, y: -30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 2.2 }}

@@ -13,18 +13,18 @@ function OurTechnology() {
     return (
         <motion.div className='flex flex-col items-center justify-center px-5 ' >
 
-            <div className='relative'>
+            <div className='relative text-center h-18 w-50 backdrop-blur-md mb-10'>
 
-                <motion.div className="h-15 w-15 bg-amber-500 absolute top-3 left-0 rounded-l-xl" initial={{ left: 0 }} viewport={{ margin: "-70px" }} whileInView={{ left: -90 }} transition={{ duration: .5 }}></motion.div>
+                <motion.div className="h-15 w-20 bg-amber-500 absolute top-3  rounded-l-xl" initial={{ left: 0 }} viewport={{ margin: "-70px" }} whileInView={{ left: -50 }} transition={{ duration: .5 }}></motion.div>
                 <h1 className='font-bold text-4xl mt-5 mb-20 text-amber-50'>About</h1>
-                <motion.div className="h-15 w-15 bg-amber-500 absolute top-3 right-0  rounded-r-xl" initial={{ right: 0 }} viewport={{ margin: "-70px" }} whileInView={{ right: -90 }} transition={{ duration: .5 }}></motion.div>
+                <motion.div className="h-15 w-20 bg-amber-500 absolute top-3 left-20 rounded-r-xl" initial={{ right: 10 }} viewport={{ margin: "-70px" }} whileInView={{ left: 170 }} transition={{ duration: .5 }}></motion.div>
             </div>
 
             <section className="grid md:grid-cols-2 gap-5 ">
 
                 <div className="flex flex-col gap-5 items-center">
 
-                    <div className='   gap-5 max-w-150 ' >
+                    <div className='gap-5 max-w-150 backdrop-blur-md ' >
                         <motion.h1 className="font-bold text-5xl text-gray-50 ">
                             <motion.span
                                 className="text-amber-500 inline-block"

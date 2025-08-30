@@ -4,7 +4,7 @@ import ParticleBackground from '../components/ParticleBackground';
 import OurTechnology from '../components/OurTechnology';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { useState, useEffect } from 'react';
-import BgImg from "../../public/Img/img4.jpg"
+import BgImg from "../assets/Img/img4.jpg"
 import '../styles/HomeBg.css'
 const Home = () => {
   const [animateBg, setAnimateBg] = useState(false);
@@ -158,7 +158,7 @@ const Home = () => {
           <span></span>
           <span></span>
         </div>
-        <OurTechnology /> 
+        <OurTechnology />
       </div>
     </div>
   );
