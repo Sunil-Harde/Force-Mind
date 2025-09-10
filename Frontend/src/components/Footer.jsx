@@ -23,7 +23,7 @@ const Footer = () => {
   ];
 
   return (
-    <motion.footer className="bg-darker py-12 pl-10 bg-gray-800">
+    <motion.footer className=" z-1 bg-darker py-12 pl-10 bg-gray-800">
       <motion.div  className="mx-auto px-4" >
         <motion.div  className="grid grid-cols-2 md:grid-cols-3 gap-8">
           <motion.div  className="">
@@ -39,7 +39,7 @@ const Footer = () => {
             </p>
             <motion.div  className="flex space-x-4">
               {socialLinks.map((social) => (
-                <motion.a
+                <motion.a 
                   key={social.name}
                   href={social.url}
                   target="_blank"
@@ -76,16 +76,16 @@ const Footer = () => {
           <motion.div  >
             <h3 className="text-white font-bold text-lg mb-4 ">Contact</h3>
             <address className="text-gray-400 not-italic">
-              <p className="mb-2">123 Tech Street</p>
-              <p className="mb-2">San Francisco, CA 94107</p>
-              <p className="mb-2">Phone: (123) 456-7890</p>
-              <p>Email: info@techsolutions.com</p>
+              <p className="mb-2">Ritilink Private Limited</p>
+              <p className="mb-2">Pune Maharashtra</p>
+              <p className="mb-2">Phone: +91 9270355138</p>
+              <p>Email: info@ritilink.com</p>
             </address>
           </motion.div >
         </motion.div >
 
         <motion.div  className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} TechSolutions. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Ritilink Private Limited. All rights reserved.</p>
         </motion.div >
       </motion.div >
     </motion.footer>

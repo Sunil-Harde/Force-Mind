@@ -25,12 +25,15 @@
 }
 
 .bg span:nth-child(3) {
-   top: 10rem;
+   top: 8rem;
    left: 20%;
    animation-delay: .5s;
-   transform: rotate(-20deg);
+   transform: rotate(20deg);
    background: linear-gradient(to right, rgb(255, 166, 0), rgb(255, 0, 0));
-
+   -webkit-transform: rotate(20deg);
+   -moz-transform: rotate(20deg);
+   -ms-transform: rotate(20deg);
+   -o-transform: rotate(20deg);
 }
 
 .bg span:nth-child(4) {
@@ -47,7 +50,7 @@
 
 .bg span:nth-child(5) {
    top: 0;
-   left: 60%;
+   left: 80%;
    height: 20px;
    width: 20px;
    border-radius: 50%;
@@ -78,23 +81,22 @@
 
 .bg span:nth-child(8) {
    top: 0;
-   left: 20%;
+   left: 40%;
    height: 20px;
    width: 20px;
    border-radius: 50%;
-   animation-delay: 2s;
+   animation-delay: 2.4s;
    background: linear-gradient(to left, rgb(255, 166, 0), rgb(255, 0, 0));
-   animation-name: floatUp;
+   animation-name: floatUpDownLeft;
 }
 
 
 .bg span:nth-child(9) {
    top: 0;
-   left: 25%;
+   left: 35%;
    height: 20px;
    width: 20px;
    border-radius: 50%;
-   animation-delay: 1s;
    background: linear-gradient(to left, rgb(255, 166, 0), rgb(255, 0, 0));
    animation-name: floatUpDown;
 }

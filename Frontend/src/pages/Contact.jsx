@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline';
+import '../styles/Contact.css'
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -27,7 +29,9 @@ const Contact = () => {
       ...formData,
       [name]: value,
     });
+
     // Clear error when user types
+    
     if (errors[name]) {
       setErrors({
         ...errors,
@@ -68,7 +72,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-500">
+    <section className="py-20 bg-gray-800">
       <div className="container mx-auto px-4 ">
         <motion.div
           initial={{ opacity: 0 }}
@@ -76,7 +80,7 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In <span className="text-primary">Touch</span></h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Get In <span className="text-primary">Touch</span></h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Have a project in mind or want to discuss potential collaboration? We'd love to hear from you.
           </p>
@@ -91,75 +95,26 @@ const Contact = () => {
             transition={{ duration: 0.5 }}
           >
             <form onSubmit={handleSubmit} className="space-y-6">
+
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-dark border ${errors.name ? 'border-red-500' : 'border-gray-800'} rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all`}
-                  placeholder="Your name"
-                />
+                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">Name</label>
+                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className={`w-full px-4 py-3 bg-dark border ${errors.name ? 'border-red-500' : 'border-gray-800'} rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all`} placeholder="Your name" />
                 {errors.name && (
-                  <motion.p
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="mt-1 text-sm text-red-500"
-                  >
-                    {errors.name}
-                  </motion.p>
+                  <motion.p initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="mt-1 text-sm text-red-500" >   {errors.name} </motion.p>
                 )}
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-dark border ${errors.email ? 'border-red-500' : 'border-gray-800'} rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all`}
-                  placeholder="your.email@example.com"
-                />
-                {errors.email && (
-                  <motion.p
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="mt-1 text-sm text-red-500"
-                  >
-                    {errors.email}
-                  </motion.p>
-                )}
+                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">   Email </label>
+                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className={`w-full px-4 py-3 bg-dark border ${errors.email ? 'border-red-500' : 'border-gray-800'} rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all`} placeholder="your.email@example.com" />{errors.email && (
+                  <motion.p initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="mt-1 text-sm text-red-500"  > {errors.email} </motion.p>)}
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="5"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-dark border ${errors.message ? 'border-red-500' : 'border-gray-800'} rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all`}
-                  placeholder="Your message..."
-                ></textarea>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">  Message </label>
+                <textarea id="message" name="message" rows="5" value={formData.message} onChange={handleChange} className={`w-full px-4 py-3 bg-dark border ${errors.message ? 'border-red-500' : 'border-gray-800'} rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all`} placeholder="Your message..."></textarea>
                 {errors.message && (
-                  <motion.p
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="mt-1 text-sm text-red-500"
-                  >
-                    {errors.message}
-                  </motion.p>
+                  <motion.p  initial={{ opacity: 0, y: -10 }}  animate={{ opacity: 1, y: 0 }}  className="mt-1 text-sm text-red-500">  {errors.message}</motion.p>
                 )}
               </div>
 
@@ -203,41 +158,42 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="bg-dark border border-gray-800 rounded-xl p-8  mb-2 "
           >
-            <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+            <h3 className="text-2xl font-bold mb-6 text-white "> <span className='text-amber-500'>Contact</span> Information</h3>
             <p className="text-gray-400 mb-8">
               Feel free to reach out to us through any of these channels. Our team is ready to assist you.
             </p>
 
             <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <div className="flex items-start space-x-4 ">
+                <div className=" logo w-10 h-10 rounded-full bg-primary/10 flex items-center after:w-21 justify-center flex-shrink-0 border-2 after border-amber-500 relative after:content-[''] after:absolute after:h-[2px] hover:after:bg-amber-500 after:top-1/2 after:left-[5rem] after:-translate-x-1/2 after:-translate-y-1/2 after:transform">
                   <MapPinIcon className="w-5 h-5 text-primary" />
                 </div>
+
                 <div>
-                  <h4 className="font-bold text-gray-300">Address</h4>
-                  <p className="text-gray-400">123 Tech Street, San Francisco, CA 94107</p>
+                  <h4 className="font-bold text-gray-300  ">Address</h4>
+                  <p className="text-gray-400">Ritilink Private Limited, Pune, Maharashtra/</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <div className=" logo w-10 h-10 rounded-full bg-primary/10 flex items-center after:w-20 justify-center flex-shrink-0 border-2 after border-amber-500 relative after:content-[''] after:absolute after:h-[2px] after:bg-[var(--primary-color)] after:top-1/2 after:left-[4.5rem] after:-translate-x-1/2 after:-translate-y-1/2 after:transform">
                   <EnvelopeIcon className="w-5 h-5 text-primary" />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-300">Email</h4>
-                  <p className="text-gray-400">info@techsolutions.com</p>
-                  <p className="text-gray-400">support@techsolutions.com</p>
+                  <p className="text-gray-400">info@ritilink.com</p>
+                  {/* <p className="text-gray-400">support@techsolutions.com</p> */}
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <PhoneIcon className="w-5 h-5 text-primary" />
+                <div className=" logo w-10 h-10 rounded-full bg-primary/10 flex items-center after:w-20 justify-center flex-shrink-0 border-2 after border-amber-500 relative after:content-[''] after:absolute after:h-[2px] after:bg-[var(--primary-color)] after:top-1/2 after:left-[4.5rem] after:-translate-x-1/2 after:-translate-y-1/2 after:transform">
+                  <PhoneIcon className=" logo w-5 h-5 text-primary" />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-300">Phone</h4>
-                  <p className="text-gray-400">+1 (123) 456-7890</p>
-                  <p className="text-gray-400">+1 (123) 456-7891</p>
+                  <p className="text-gray-400">+91 9270355138</p>
+                  {/* <p className="text-gray-400">+1 (123) 456-7891</p> */}
                 </div>
               </div>
             </div>

@@ -8,7 +8,7 @@ const ServiceCard = ({ icon, title, description }) => {
         boxShadow: '0 10px 25px -5px rgba(0, 240, 255, 0.2)',
       }}
       transition={{ duration: 0.3 }}
-      className="bg-dark border border-gray-800 rounded-xl p-6 flex flex-col hover:border-primary transition-all duration-300"
+      className="bg-dark border border-gray-800 rounded-xl p-6 flex flex-col hover:border-primary backdrop-blur-md transition-all duration-300 "
     >
       <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
         <div className="w-6 h-6 text-primary">{icon}</div>
@@ -17,7 +17,7 @@ const ServiceCard = ({ icon, title, description }) => {
       <p className="text-gray-400">{description}</p>
 
       {/* <!-- From Uiverse.io by Smit-Prajapati --> */}
-      <div className="parent">
+      {/* <div className="parent">
         <div className="card">
           <div className="content-box">
             <span className="card-title">3D Card</span>
@@ -26,12 +26,12 @@ const ServiceCard = ({ icon, title, description }) => {
             </p>
             <span className="see-more">See More</span>
           </div>
-          {/* <div className="date-box">
+          <div className="date-box">
             <span className="month">JUNE</span>
             <span className="date">29</span>
-          </div> */}
+          </div>
         </div>
-      </div>
+      </div> */}
 
     </motion.div>
   );

@@ -5,7 +5,7 @@ import OurTechnology from '../components/OurTechnology';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { useState, useEffect } from 'react';
 import BgImg from "../assets/Img/img4.jpg"
-import '../styles/HomeBg.css'
+import BgAnimation from "../components/BgAnimation"
 const Home = () => {
   const [animateBg, setAnimateBg] = useState(false);
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
@@ -33,6 +33,7 @@ const Home = () => {
               className="absolute"
               height={"100vh"}
               width={"100%"}
+              type='spring'
               initial={{
                 width: initialImgStyle.width,
                 height: initialImgStyle.height,
@@ -57,7 +58,7 @@ const Home = () => {
                     borderRadius: "5%",
                   }
               }
-              transition={{ duration: 0.8, ease: "easeInOut" }}
+              transition={{ duration: 0.8, ease: "easeInOut" , type: "spring",}}
             />
 
             <ParticleBackground />
@@ -68,23 +69,24 @@ const Home = () => {
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 2.4 }}
+                    transition={{ duration: 0.5, delay: 2.4,  type: "spring", }}
                     className="mb-6"
                   >
                     <span className="text-gray-400 text-primary px-4 py-2 rounded-full text-sm font-medium">
-                      Innovative IT Solutions
+                      Ritilink Private Limited
                     </span>
                   </motion.div>
 
                   <AnimatedText
-                    text="Transforming Ideas Into Digital Reality"
+                    text="The  Right  Link  For  IT  Success"
                     className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-amber-500 pl-10"
                   />
 
                   <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 2.7, duration: 0.5 }}
+                    transition={{ delay: 2.7, duration: 0.5, type: "spring", }}
+                    
                     className="sm:text-xl text-blue-600 mb-8 max-w-2xl mx-auto"
                   >
                     We deliver cutting-edge technology solutions tailored to
@@ -140,24 +142,12 @@ const Home = () => {
             </motion.div>
           </>
 
-
         </motion.section>
 
       </section>
 
       <div className="py-10 min-h-screen flex items-center justify-center bg-gray-900 relative">
-        <div className="bg">
-          <h1></h1>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <BgAnimation/>
         <OurTechnology />
       </div>
     </div>

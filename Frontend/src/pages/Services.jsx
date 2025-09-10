@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import ServiceCard from '../components/ServiceCard';
+import BgAnimation from '../components/BgAnimation';
 import {
   CodeBracketIcon,
   DevicePhoneMobileIcon,
@@ -16,32 +17,40 @@ const Services = () => {
   const services = [
     {
       icon: <CodeBracketIcon />,
-      title: "Web Development",
+      title: "Desktop support services",
       description: "Custom websites and web applications built with modern technologies for optimal performance."
     },
     {
       icon: <DevicePhoneMobileIcon />,
-      title: "Mobile App Development",
+      title: "IT Comprehensive Infra design, implement and operation",
       description: "iOS and Android apps that deliver seamless user experiences across all devices."
     },
     {
       icon: <CloudIcon />,
-      title: "Cloud Solutions",
+      title: "CCTV and Access Control Systems",
       description: "Scalable cloud infrastructure and services to power your business growth."
     },
     {
       icon: <CpuChipIcon />,
-      title: "Software Development",
+      title: "Application and Website Development",
       description: "Custom software solutions tailored to your specific business requirements."
     },
     {
       icon: <ShieldCheckIcon />,
-      title: "Cybersecurity",
+      title: "Entry-Level IT Training and Certifications",
       description: "Comprehensive security solutions to protect your digital assets and data."
     },
     {
       icon: <ChartBarIcon />,
-      title: "IT Consulting",
+      title: "Training and Development for College Interns",
+      description: "Expert advice to help you make the right technology decisions for your business."
+    }, {
+      icon: <ChartBarIcon />,
+      title: "Hiring and Recruitment Solutions",
+      description: "Expert advice to help you make the right technology decisions for your business."
+    }, {
+      icon: <ChartBarIcon />,
+      title: "Resource Provisioning",
       description: "Expert advice to help you make the right technology decisions for your business."
     },
   ];
@@ -65,7 +74,13 @@ const Services = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-500 text-amber-500">
+    <section className="  overflow-hidden min-h-screen relative py-20 bg-gray-900 text-amber-500">
+
+      <div className="absolute min-h-screen w-screen " >
+
+        <BgAnimation />
+      </div>
+
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0 }}
@@ -73,10 +88,13 @@ const Services = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4"> Industries We Serve</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            Comprehensive IT solutions designed to meet your business needs and drive growth.
-          </p>
+          <div className="m-auto p-5 w-2xl backdrop-blur-lg">
+
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 "> Industries We Serve</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Comprehensive IT solutions designed to meet your business needs and drive growth.
+            </p>
+          </div>
         </motion.div>
 
         <motion.div

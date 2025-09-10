@@ -73,12 +73,10 @@ const About = () => {
           >
             <h3 className="text-2xl font-bold mb-4">Our Story</h3>
             <p className="text-black mb-4">
-              Founded in 2015, TechSolutions started as a small team of developers with a big vision.
-              Today, we've grown into a full-service IT company serving clients worldwide.
+             We are an IT service company offering a comprehensive range of support to help digitalize all types of businesses.
             </p>
             <p className="text-black">
-              Our journey has been marked by innovation, dedication, and a relentless pursuit of
-              excellence in everything we do.
+              All types of infrastructure, including warehouses, small offices, corporate offices manufacturing departments, IT/OT infrastructure, security systems, access control, schools, and colleges, will be designed and operated more smoothly.
             </p>
           </motion.div>
 
